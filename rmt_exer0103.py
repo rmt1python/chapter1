@@ -5,7 +5,7 @@ Created on Tue Dec 28 16:21:37 2017
 File: rmt_exer0103.py
 
 @author: rmt1python @ rochester econ 
-/ had learned Python from Jon Stachulski and Tom Sargent in 2013 
+/ had learned Python from Jon Stachurski and Tom Sargent in 2013 
 / @ SNU and taught myself using QuantEcon.org afterward.
 
 Markov chain exercise
