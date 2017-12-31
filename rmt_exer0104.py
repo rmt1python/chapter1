@@ -70,9 +70,10 @@ else:
     temp = doublejex0104(A, CCT)
     Cx0 = temp.doublej()
     
-    A = np.array(A, dtype="float")
+   
+    #1.c
     A5 = np.linalg.matrix_power(A,5)
-    print("\n\nFor 1.3 \n ")
+    print("\n\nFor 1.c \n ")
     muvec =np.array([mu, mu, mu, mu, 1]).reshape(5,1)
     betahat = np.linalg.inv(Cx0 + muvec @ muvec.T) @\
     (Cx0.T @ A5.T + muvec @ muvec.T)@\
@@ -80,11 +81,19 @@ else:
     print(betahat.reshape(1,5))                 
     print("\n\nComparison")
     print(A5[0])
+    
+    # 1.d
     beta=.95
     H2 = np.array([1., 0., 0., 0., 0.])@\
     np.linalg.inv( np.eye(5)- (beta * A)) 
-    print("\n\nFor 1.4 \n ")
+    print("\n\nFor 1.d \n ")
     print(H2.T)
+    
+    # 1.e
+    print("\n\nFor 1.e \n ")
+    print((Cx0 @ np.linalg.matrix_power(A,1).T)[1,1])
+    print((Cx0 @ np.linalg.matrix_power(A,5).T)[1,1])
+    print((Cx0 @ np.linalg.matrix_power(A,10).T)[1,1])
 """
 Another inefficient way to form the matrix A
 
